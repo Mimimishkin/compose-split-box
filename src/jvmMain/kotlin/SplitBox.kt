@@ -1,16 +1,12 @@
-import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.Orientation.Horizontal
 import androidx.compose.foundation.gestures.Orientation.Vertical
 import androidx.compose.foundation.gestures.draggable
 import androidx.compose.foundation.gestures.rememberDraggableState
-import androidx.compose.foundation.indication
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color.Companion.Red
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.layout.layout
@@ -31,17 +27,17 @@ val defaultDivider: @Composable (Orientation) -> ComposableFun = @Composable {
     }
 }
 
-class SplittedBoxState(private val count: Int) {
+class SplitBoxState(private val count: Int) {
     var resizable by mutableStateOf(true)
 
     val percentageSizes = List(count) { 1f / count }.toMutableStateList()
 }
 
 @Composable
-fun SplittedBox(
+fun SplitBox(
     orientation: Orientation,
     components: List<Pair<Dp, ComposableFun>>,
-    state: SplittedBoxState = remember { SplittedBoxState(components.size) },
+    state: SplitBoxState = remember { SplitBoxState(components.size) },
     modifier: Modifier = Modifier,
     divider: ComposableFun = defaultDivider(orientation),
     handlerSize: Dp = 16.dp,

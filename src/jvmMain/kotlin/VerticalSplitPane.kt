@@ -7,14 +7,14 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun VerticalSplitPane(
     modifier: Modifier = Modifier,
-    state: SplittedBoxState = SplittedBoxState(2),
+    state: SplitBoxState = SplitBoxState(2),
     firstMinSize: Dp = 0.dp,
     first: ComposableFun,
     secondMinSize: Dp = 0.dp,
     second: ComposableFun,
     divider: ComposableFun = defaultDivider(Orientation.Vertical),
     handlerSize: Dp = 16.dp,
-) = SplittedBox(
+) = SplitBox(
     orientation = Orientation.Vertical,
     state = state,
     modifier = modifier,
