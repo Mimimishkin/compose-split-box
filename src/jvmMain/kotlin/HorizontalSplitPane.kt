@@ -7,6 +7,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun HorizontalSplitPane(
     modifier: Modifier = Modifier,
+    state: SplittedBoxState = SplittedBoxState(2),
     firstMinSize: Dp = 0.dp,
     first: ComposableFun,
     secondMinSize: Dp = 0.dp,
@@ -15,6 +16,7 @@ fun HorizontalSplitPane(
     handlerSize: Dp = 16.dp,
 ) = SplittedBox(
     orientation = Horizontal,
+    state = state,
     modifier = modifier,
     components = listOf(firstMinSize to first, secondMinSize to second),
     divider = divider,
