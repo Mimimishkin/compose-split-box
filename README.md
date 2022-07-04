@@ -1,5 +1,5 @@
-# Compose splitted box
-[![](https://jitpack.io/v/Mimimishkin/compose-splitted-box.svg)](https://jitpack.io/#Mimimishkin/compose-splitted-box)
+# Compose split box
+[![](https://jitpack.io/v/Mimimishkin/compose-split-box.svg)](https://jitpack.io/#Mimimishkin/compose-split-box)
 
 Simple vertical and horizontal split elements:
 
