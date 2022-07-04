@@ -1,11 +1,11 @@
 # Compose splitted box
 [![](https://jitpack.io/v/Mimimishkin/compose-splitted-box.svg)](https://jitpack.io/#Mimimishkin/compose-splitted-box)
 
-Simple vertical and horizontal splitted elements:
+Simple vertical and horizontal split elements:
 
-###### SplittedBox (base component) interface:
+###### SplitBox (base component) interface:
 
-    SplittedBox(
+    SplitBox(
         orientation: Orientation,
         state: SplittedBoxState, // state for disable resizing and control splitting 
         components: List<Pair<Dp, ComposableFun>>, // min sizes and components
@@ -30,9 +30,9 @@ Simple vertical and horizontal splitted elements:
         }
     )
     
-###### SplittedLine (e.g. for table header) :
+###### SplitLine (e.g. for table header) :
 
-    SplittedLine(
+    SplitLine(
         { Text("First") },
         { Text("Second") },
         { Text("Third") },
