@@ -1,4 +1,6 @@
 # Compose splitted box
+[![](https://jitpack.io/v/Mimimishkin/compose-splitted-box.svg)](https://jitpack.io/#Mimimishkin/compose-splitted-box)
+
 Simple vertical and horizontal splitted elements:
 
 ###### SplittedBox (base component) interface:
