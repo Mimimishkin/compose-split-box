@@ -7,6 +7,7 @@ Simple vertical and horizontal splitted elements:
 
     SplittedBox(
         orientation: Orientation,
+        state: SplittedBoxState, // state for disable resizing and control splitting 
         components: List<Pair<Dp, ComposableFun>>, // min sizes and components
         modifier: Modifier = Modifier,
         divider: ComposableFun = defaultDivider(orientation),
