@@ -4,11 +4,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose")
+    id("org.jetbrains.compose") version "1.1.1"
+    `maven-publish`
 }
 
-group = "com.example"
-version = "1.0-SNAPSHOT"
+group = "my.components"
+version = "1.0.0"
 
 repositories {
     google()
@@ -19,7 +20,7 @@ repositories {
 kotlin {
     jvm {
         compilations.all {
-            kotlinOptions.jvmTarget = "11"
+            kotlinOptions.jvmTarget = "17"
         }
         withJava()
     }
@@ -33,13 +34,14 @@ kotlin {
     }
 }
 
-compose.desktop {
-    application {
-        mainClass = "MainKt"
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "compose-splitted-box"
-            packageVersion = "1.0.0"
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = project.group as String
+            artifactId = "compose-splitted-box"
+            version = project.version as String
+
+            from(components["kotlin"])
         }
     }
 }
